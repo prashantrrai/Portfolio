@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import { useTable } from 'react-table'
+// import { useTable } from 'react-table'
 
 const Table = () => {
     const [users, setUsers] = useState([])
