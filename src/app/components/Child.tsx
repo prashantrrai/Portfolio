@@ -23,7 +23,7 @@ const Child = (props: any) => {
       </div>
 
 
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-4 p-4">
         <input
           type='text'
           placeholder='Write your message here....'
@@ -42,4 +42,4 @@ const Child = (props: any) => {
   )
 }
 
-export default Child
+export default Child;

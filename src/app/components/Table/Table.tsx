@@ -35,37 +35,33 @@ const Table = () => {
     }, [])
 
     return (
-        <div>
-            <table className='table-auto text-white border-separate border border-slate-700 border-spacing-4' >
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Gender</th>
-                        <th>Phone</th>
-                        <th>University</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        users.map((i: any) => (
-                            <tr >
-                                <td>{i.id}</td>
-                                <td>{i.firstName + " " + i.lastName}</td>
-                                <td>{i.email}</td>
-                                <td>{i.gender}</td>
-                                <td>{i.phone}</td>
-                                <td>{i.university}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-                <caption className="caption-bottom">
-                    Table 3.1: Professional Students and their Designated Profile.
-                </caption>
-            </table>
-        </div>
+<div className="overflow-x-auto p-2">
+  <table className="min-w-full bg-transparent border-collapse">
+    <thead>
+      <tr className="bg-blue-500 text-white">
+        <th className="p-2">#</th>
+        <th className="p-2">Name</th>
+        <th className="p-2">Email</th>
+        <th className="p-2">Gender</th>
+        <th className="p-2">Phone</th>
+        <th className="p-2">University</th>
+      </tr>
+    </thead>
+    <tbody className="bg-white divide-y divide-gray-200">
+      {users.map((i: any, index) => (
+        <tr key={i.id} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
+          <td className="py-0 px-2">{i.id}</td>
+          <td className="py-0 px-2">{i.firstName + " " + i.lastName}</td>
+          <td className="py-0 px-2">{i.email}</td>
+          <td className="py-0 px-2">{i.gender}</td>
+          <td className="py-0 px-2">{i.phone}</td>
+          <td className="py-0 px-2">{i.university}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
     )
 }
 

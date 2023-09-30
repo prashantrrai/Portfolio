@@ -10,12 +10,11 @@ export default function Home() {
   return (
     <main>
       <Header/>
-      {/* <Hero/> */}
-      {/* <Table/> */}
-      {/* <Product/> */}
+      <Hero/>
+      <Table/>
+      <Product/>  
       <Parent/>
-      {/* <Child/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   )
 }
